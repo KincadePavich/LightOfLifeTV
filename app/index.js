@@ -22,7 +22,7 @@ const styles = {
     color: '#fff',
     paddingBottom: 15,
     paddingTop: 15,
-    backgroundColor: '#21c2f8',
+    backgroundColor: '#00b4f0',
     width: '100%',
     textAlign: 'center',
     fontWeight: 'bold'

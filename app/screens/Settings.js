@@ -62,7 +62,7 @@ class Settings extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.headingStyle}>CHOOSE YOUR LANGUAGE</Text>
+        <Text style={styles.headingStyle}>Press your desired language and press the "CHANGE LANGUAGE" button below.</Text>
         <TouchableOpacity onPress={this.setEnglish}>
           <Text style={styles.textStyle}>English</Text>
         </TouchableOpacity>
@@ -76,7 +76,7 @@ class Settings extends Component {
           <Text style={styles.textStyle}>عربى</Text>
         </TouchableOpacity>
         <Button onPress={this.updateLanguage}>
-          SUBMIT
+          CHANGE LANGUAGE
         </Button>
       </View>
     );
@@ -92,8 +92,8 @@ const styles = {
   },
   headingStyle: {
     fontSize: 24,
-    textDecorationLine: 'underline',
-    paddingBottom: 10
+    padding: 10,
+    textAlign: 'center'
   },
   textStyle: {
     fontSize: 20,
