@@ -8,11 +8,25 @@ class App extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Text style={{ alignSelf: 'center', fontSize: 30, color: '#000', paddingBottom: 15, paddingTop: 15 }}>Light of Life TV</Text>
+        <Text style={styles.titleStyle}>Light of Life TV</Text>
         <Root />
       </View>
     );
   }
 }
+
+const styles = {
+  titleStyle: {
+    alignSelf: 'center',
+    fontSize: 30,
+    color: '#fff',
+    paddingBottom: 15,
+    paddingTop: 15,
+    backgroundColor: '#21c2f8',
+    width: '100%',
+    textAlign: 'center',
+    fontWeight: 'bold'
+  }
+};
 
 export default App;

@@ -112,8 +112,13 @@ export const Tabs = TabNavigator({
     labelStyle: {
       fontSize: 16
     },
+    indicatorStyle: {
+      backgroundColor: '#21c2f8',
+    },
+    activeTintColor: '#fff',
+    inactiveTintColor: '#21c2f8',
     style: {
-      backgroundColor: '#002469',
+      backgroundColor: '#222',
     },
   }
 });
