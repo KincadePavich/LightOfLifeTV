@@ -107,7 +107,10 @@ export const Tabs = TabNavigator({
     scrollEnabled: true,
     tabStyle: {
       width: 150,
-      height: 50,
+      height: 75,
+    },
+    labelStyle: {
+      fontSize: 16
     },
     style: {
       backgroundColor: '#002469',

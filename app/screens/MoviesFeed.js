@@ -36,11 +36,18 @@ class MoviesFeed extends Component {
             key={this.state.items[i].id}
             avatar={{ uri: this.state.items[i].cds_source }}
             title={this.state.items[i].title.rendered}
-            //onPress={() => this.onPressVideo(this.state.items[i])}
             chevronColor='#000'
+            avatarContainerStyle={{
+              width: 150,
+              height: 150
+            }}
             avatarStyle={{
-              height: 60,
-              width: 60
+              height: 150,
+              width: 150
+            }}
+            titleStyle={{
+              fontSize: 22,
+              textAlign: 'center'
             }}
           />
         </TouchableOpacity>
@@ -57,7 +64,7 @@ class MoviesFeed extends Component {
           </View>
         }
         { this.state.loaded &&
-          <ScrollView style={{ marginBottom: 40, marginTop: -22 }}>
+          <ScrollView style={{ marginTop: -22 }}>
             <List>
               {this.renderList()}
             </List>

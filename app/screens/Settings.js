@@ -62,18 +62,18 @@ class Settings extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>CHOOSE YOUR LANGUAGE</Text>
+        <Text style={styles.headingStyle}>CHOOSE YOUR LANGUAGE</Text>
         <TouchableOpacity onPress={this.setEnglish}>
-          <Text>English</Text>
+          <Text style={styles.textStyle}>English</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={this.setTurkish}>
-          <Text>Türk</Text>
+          <Text style={styles.textStyle}>Türk</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={this.setUrdu}>
-          <Text>اردو</Text>
+          <Text style={styles.textStyle}>اردو</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={this.setArabic}>
-          <Text>عربى</Text>
+          <Text style={styles.textStyle}>عربى</Text>
         </TouchableOpacity>
         <Button onPress={this.updateLanguage}>
           SUBMIT
@@ -89,7 +89,16 @@ const styles = {
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  }
+  },
+  headingStyle: {
+    fontSize: 24,
+    textDecorationLine: 'underline',
+    paddingBottom: 10
+  },
+  textStyle: {
+    fontSize: 20,
+    padding: 10
+  },
 };
 
 export default Settings;

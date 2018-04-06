@@ -8,7 +8,7 @@ class App extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Text style={{ alignSelf: 'center', fontSize: 18, color: '#000', paddingBottom: 15 }}>Light of Life TV</Text>
+        <Text style={{ alignSelf: 'center', fontSize: 30, color: '#000', paddingBottom: 15, paddingTop: 15 }}>Light of Life TV</Text>
         <Root />
       </View>
     );
