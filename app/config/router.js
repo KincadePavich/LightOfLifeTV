@@ -4,6 +4,7 @@ import ChildrenFeed from '../screens/ChildrenFeed';
 import MoviesFeed from '../screens/MoviesFeed';
 import ProgramsFeed from '../screens/ProgramsFeed';
 import VideoDetail from '../screens/VideoDetail';
+import VideoPlayer from '../screens/VideoPlayer';
 import Settings from '../screens/Settings';
 
 export const SettingsStack = StackNavigator({
@@ -26,6 +27,12 @@ export const DisciplesStack = StackNavigator({
     navigationOptions: {
       title: 'Back to Disciples TV',
     }
+  },
+  VideoPlayer: {
+    screen: VideoPlayer,
+    navigationOptions: {
+      title: 'Back to Episodes',
+    }
   }
 });
 export const MoviesStack = StackNavigator({
@@ -39,6 +46,12 @@ export const MoviesStack = StackNavigator({
     screen: VideoDetail,
     navigationOptions: {
       title: 'Back to Movies',
+    }
+  },
+  VideoPlayer: {
+    screen: VideoPlayer,
+    navigationOptions: {
+      title: 'Back to Episodes',
     }
   }
 });
@@ -54,6 +67,12 @@ export const ProgramsStack = StackNavigator({
     navigationOptions: {
       title: 'Back to TV Programs',
     }
+  },
+  VideoPlayer: {
+    screen: VideoPlayer,
+    navigationOptions: {
+      title: 'Back to Episodes',
+    }
   }
 });
 export const ChildrenStack = StackNavigator({
@@ -67,6 +86,12 @@ export const ChildrenStack = StackNavigator({
     screen: VideoDetail,
     navigationOptions: {
       title: 'Back to Childen',
+    }
+  },
+  VideoPlayer: {
+    screen: VideoPlayer,
+    navigationOptions: {
+      title: 'Back to Episodes',
     }
   }
 });
