@@ -11,7 +11,19 @@ export const SettingsStack = StackNavigator({
   Settings: {
     screen: Settings,
     navigationOptions: {
-      header: null
+      title: 'Choose Your Language',
+      headerStyle: {
+        borderBottomColor: '#000',
+        borderBottomWidth: 2,
+        backgroundColor: '#ddd',
+        width: '100%',
+      },
+      headerTitleStyle: {
+        width: '100%',
+        textAlign: 'center',
+        fontSize: 24,
+        alignSelf: 'center'
+      }
     },
   },
 });
