@@ -39,14 +39,15 @@ class DisciplesFeed extends Component {
             chevronColor='#000'
             avatarContainerStyle={{
               width: 150,
-              height: 150
+              height: 150,
+              maxWidth: '30%',
             }}
             avatarStyle={{
-              height: 150,
-              width: 150
+              height: '100%',
+              width: '100%',
             }}
             titleStyle={{
-              fontSize: 22,
+              fontSize: 16,
               textAlign: 'center'
             }}
           />

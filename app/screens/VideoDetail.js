@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, View, TouchableOpacity } from 'react-native';
+import { ScrollView, View, TouchableOpacity, Text } from 'react-native';
 import { List, ListItem } from 'react-native-elements';
 import YouTube from 'react-native-youtube';
 

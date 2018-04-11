@@ -26,12 +26,22 @@ export const DisciplesStack = StackNavigator({
     screen: VideoDetail,
     navigationOptions: {
       title: 'Back to Disciples TV',
+      headerStyle: {
+        borderBottomColor: '#000',
+        borderBottomWidth: 2,
+      },
+      headerBackTitle: '',
+      headerTruncatedBackTitle: '',
     }
   },
   VideoPlayer: {
     screen: VideoPlayer,
     navigationOptions: {
       title: 'Back to Episodes',
+      headerStyle: {
+        borderBottomColor: '#000',
+        borderBottomWidth: 2,
+      },
     }
   }
 });
@@ -46,12 +56,22 @@ export const MoviesStack = StackNavigator({
     screen: VideoDetail,
     navigationOptions: {
       title: 'Back to Movies',
+      headerStyle: {
+        borderBottomColor: '#000',
+        borderBottomWidth: 2,
+      },
+      headerBackTitle: '',
+      headerTruncatedBackTitle: '',
     }
   },
   VideoPlayer: {
     screen: VideoPlayer,
     navigationOptions: {
       title: 'Back to Episodes',
+      headerStyle: {
+        borderBottomColor: '#000',
+        borderBottomWidth: 2,
+      },
     }
   }
 });
@@ -66,12 +86,22 @@ export const ProgramsStack = StackNavigator({
     screen: VideoDetail,
     navigationOptions: {
       title: 'Back to TV Programs',
+      headerStyle: {
+        borderBottomColor: '#000',
+        borderBottomWidth: 2,
+      },
+      headerBackTitle: '',
+      headerTruncatedBackTitle: '',
     }
   },
   VideoPlayer: {
     screen: VideoPlayer,
     navigationOptions: {
       title: 'Back to Episodes',
+      headerStyle: {
+        borderBottomColor: '#000',
+        borderBottomWidth: 2,
+      },
     }
   }
 });
@@ -86,12 +116,22 @@ export const ChildrenStack = StackNavigator({
     screen: VideoDetail,
     navigationOptions: {
       title: 'Back to Childen',
+      headerStyle: {
+        borderBottomColor: '#000',
+        borderBottomWidth: 2,
+      },
+      headerBackTitle: '',
+      headerTruncatedBackTitle: '',
     }
   },
   VideoPlayer: {
     screen: VideoPlayer,
     navigationOptions: {
       title: 'Back to Episodes',
+      headerStyle: {
+        borderBottomColor: '#000',
+        borderBottomWidth: 2,
+      },
     }
   }
 });
@@ -100,42 +140,51 @@ export const Tabs = TabNavigator({
   Disciples: {
     screen: DisciplesStack,
     navigationOptions: {
-      tabBarLabel: 'Disciples TV',
+      tabBarLabel: 'DISCIPLES TV',
     },
   },
   Movies: {
     screen: MoviesStack,
     navigationOptions: {
-      tabBarLabel: 'Movies',
+      tabBarLabel: 'MOVIES',
     },
   },
   Programs: {
     screen: ProgramsStack,
     navigationOptions: {
-      tabBarLabel: 'TV Programs',
+      tabBarLabel: 'TV PROGRAMS',
     },
   },
   Children: {
     screen: ChildrenStack,
     navigationOptions: {
-      tabBarLabel: 'Children',
+      tabBarLabel: 'CHILDREN',
     },
   },
   Settings: {
     screen: SettingsStack,
     navigationOptions: {
-      tabBarLabel: 'Language',
+      tabBarLabel: 'LANGUAGE',
     },
   },
 }, {
+  navigationOptions: {
+    swipeEnabled: true
+  },
+  tabBarPosition: 'top',
   tabBarOptions: {
     scrollEnabled: true,
     tabStyle: {
       width: 150,
       height: 75,
+      alignItems: 'center',
+      justifyContent: 'center',
+      display: 'flex',
+      flexDirection: 'row',
     },
     labelStyle: {
-      fontSize: 16
+      fontSize: 16,
+      textAlign: 'center',
     },
     indicatorStyle: {
       backgroundColor: '#21c2f8',

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView, Text } from 'react-native';
 import YouTube from 'react-native-youtube';
 
 class VideoPlayer extends Component {
@@ -7,7 +7,7 @@ class VideoPlayer extends Component {
     const id = Object.values(this.props.navigation.state.params)[0];
     const title = Object.values(this.props.navigation.state.params)[2];
     return (
-      <View style={{ flex: 1 }}>
+      <ScrollView style={{ flex: 1 }}>
         <Text style={styles.titleStyle}>{title}</Text>
         <YouTube
           apiKey="AIzaSyCov2wJ_Q1SoXTlOBusbB0-KgRw4BKKcr4"
@@ -18,7 +18,7 @@ class VideoPlayer extends Component {
           onError={e => this.setState({ error: e.error })}
           style={{ alignSelf: 'stretch', height: 300 }}
         />
-      </View>
+      </ScrollView>
     );
   }
 }
