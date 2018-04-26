@@ -153,6 +153,7 @@ export const Tabs = TabNavigator({
     },
   },
 }, {
+  ...TabNavigator.Presets.AndroidTopTabs,
   navigationOptions: {
     swipeEnabled: true
   },
