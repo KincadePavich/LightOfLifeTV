@@ -5,28 +5,7 @@ import MoviesFeed from '../screens/MoviesFeed';
 import ProgramsFeed from '../screens/ProgramsFeed';
 import VideoDetail from '../screens/VideoDetail';
 import VideoPlayer from '../screens/VideoPlayer';
-import Settings from '../screens/Settings';
 
-export const SettingsStack = StackNavigator({
-  Settings: {
-    screen: Settings,
-    navigationOptions: {
-      title: 'Choose Your Language',
-      headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
-        backgroundColor: '#ddd',
-        width: '100%',
-      },
-      headerTitleStyle: {
-        width: '100%',
-        textAlign: 'center',
-        fontSize: 24,
-        alignSelf: 'center'
-      }
-    },
-  },
-});
 export const DisciplesStack = StackNavigator({
   Disciples: {
     screen: DisciplesFeed,
@@ -173,12 +152,6 @@ export const Tabs = TabNavigator({
       tabBarLabel: 'CHILDREN',
     },
   },
-  Settings: {
-    screen: SettingsStack,
-    navigationOptions: {
-      tabBarLabel: 'LANGUAGE',
-    },
-  },
 }, {
   navigationOptions: {
     swipeEnabled: true
@@ -209,7 +182,7 @@ export const Tabs = TabNavigator({
   }
 });
 
-export const Root = StackNavigator({
+export const EnglishRoot = StackNavigator({
   Tabs: {
     screen: Tabs,
     navigationOptions: {

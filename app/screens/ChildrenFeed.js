@@ -7,8 +7,8 @@ import { Spinner } from '../components/Spinner';
 class ChildrenFeed extends Component {
   state = { items: [], loaded: false };
   componentWillMount() {
-    this.retrieveItem('schoolObj').then((school) => {
-      axios.get(school.children)
+    this.retrieveItem('language').then((language) => {
+      axios.get(language.children)
       .then(response => this.setState({ items: response.data, loaded: true }));
     }).catch((error) => {
       console.log('Unable to retrieve data: ' + error);
@@ -19,8 +19,8 @@ class ChildrenFeed extends Component {
   }
   async retrieveItem(key) {
     try {
-      const schoolItem = await AsyncStorage.getItem(key);
-      const item = JSON.parse(schoolItem);
+      const language = await AsyncStorage.getItem(key);
+      const item = JSON.parse(language);
       return item;
     } catch (error) {
       console.log(error.message);
