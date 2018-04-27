@@ -97,7 +97,7 @@ export const ProgramsStack = StackNavigator({
   }
 });
 export const ChildrenStack = StackNavigator({
-  Disciples: {
+  Children: {
     screen: ChildrenFeed,
     navigationOptions: {
       header: null

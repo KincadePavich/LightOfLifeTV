@@ -16,7 +16,7 @@ export const DisciplesStack = StackNavigator({
   DisciplesDetails: {
     screen: VideoDetail,
     navigationOptions: {
-      title: 'Back to Disciples TV',
+      title: 'Back to Discipleship TV',
       headerStyle: {
         borderBottomColor: '#000',
         borderBottomWidth: 2,
@@ -97,7 +97,7 @@ export const ProgramsStack = StackNavigator({
   }
 });
 export const ChildrenStack = StackNavigator({
-  Disciples: {
+  Children: {
     screen: ChildrenFeed,
     navigationOptions: {
       header: null
@@ -131,7 +131,7 @@ export const Tabs = TabNavigator({
   Disciples: {
     screen: DisciplesStack,
     navigationOptions: {
-      tabBarLabel: 'DISCIPLES TV',
+      tabBarLabel: 'DISCIPLESHIP TV',
     },
   },
   Movies: {
