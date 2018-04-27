@@ -1,6 +1,9 @@
 # Light of Life TV App
-## Android Version
-### See LightOfLifeTV-iOS repo for iOS build in Expo (coming soon)
+## Master Branch: Android - uses `react-native-youtube`
+## LoL-iOS-Expo Branch: iOS - uses `WebView` and `Expo `
 
-This version of LoL does not use 'Expo' since it is utilizing the 'React-Native-YouTube' library.
-It also uses 'react-native-simple-radio-button', which is unavailable in 'Expo'.
+Pairs with [Light of Life TV Website](http://54.93.50.241).
+
+Developed by Kincade Pavich at [Concept Design Studios](https://conceptdesignstudios.com)
+
+Offers religious movies, TV programs, and more in English, Turkish, Arabic, and Urdu. 
