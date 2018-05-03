@@ -19,14 +19,13 @@ class VideoDetail extends Component {
               title={embed_ID[i][2]}
               chevronColor='#000'
               avatarContainerStyle={{
-                width: 250,
-                height: 150,
+                width: 140,
+                height: 70,
                 maxWidth: '30%'
               }}
               avatarStyle={{
-                height: 150,
-                width: 250,
-                maxWidth: '100%'
+                width: '100%',
+                height: '100%'
               }}
               titleStyle={{
                 fontSize: 16,

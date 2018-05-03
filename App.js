@@ -75,7 +75,6 @@ class App extends Component {
       <View style={{ flex: 1 }}>
         <StatusBar
           barStyle="light-content"
-          hidden
         />
         <View style={{ flex: 1 }}>
           { this.state.languageChosen &&
@@ -140,6 +139,12 @@ class App extends Component {
           }
           { !this.state.languageChosen &&
             <View style={styles.container}>
+              <View style={styles.logoContainer}>
+                <Image
+                  style={{ resizeMode: 'contain', alignSelf: 'center', height: '80%', top: '10%' }}
+                  source={require('./images/favicon.png')}
+                />
+              </View>
               <View style={styles.languageContainer}>
                 <TouchableOpacity style={{ flex: 1 }} onPress={() => this.setLanguage('English')}>
                   <ImageBackground
@@ -202,6 +207,8 @@ const styles = {
   headerStyle: {
     backgroundColor: '#00b4f0',
     width: '100%',
+    paddingTop: 20,
+    postition: 'relative'
   },
   container: {
     flex: 1,
@@ -211,14 +218,15 @@ const styles = {
   },
   settings: {
     postition: 'absolute',
-    marginTop: 10,
-    marginLeft: 10,
-    width: 30,
-    height: 30,
-    zIndex: 9999999
+    marginRight: 5,
+    marginTop: 5,
+    width: 25,
+    height: 25,
+    zIndex: 9999999,
+    alignSelf: 'flex-end'
   },
   languageChoice: {
-    padding: 20,
+    padding: 10,
     fontWeight: 'bold',
     fontSize: 20,
     color: '#000',
@@ -227,8 +235,12 @@ const styles = {
     backgroundColor: 'rgba(255, 255, 255, 0.6)'
   },
   languageContainer: {
-    height: '25%',
+    height: '19%',
     alignSelf: 'stretch',
+  },
+  logoContainer: {
+    height: '24%',
+    alignSelf: 'stretch'
   },
   backgroundImage: {
     resizeMode: 'cover',

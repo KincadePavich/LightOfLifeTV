@@ -49,8 +49,8 @@ class MoviesFeed extends Component {
             title={this.state.items[i].title.rendered}
             chevronColor='#000'
             avatarContainerStyle={{
-              width: 150,
-              height: 150,
+              width: 140,
+              height: 70,
               maxWidth: '30%',
             }}
             avatarStyle={{
@@ -95,7 +95,7 @@ const styles = {
     padding: 20,
     color: '#000',
     textAlign: 'center',
-    fontSize: 24
+    fontSize: 18
   }
 };
 
