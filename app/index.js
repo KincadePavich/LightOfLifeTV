@@ -13,8 +13,6 @@ class App extends Component {
     this.retrieveItem('language').then((language) => {
       if (language !== null) {
         this.setState({ languageChosen: true, language: language.name });
-        console.log(language);
-        console.log('set to true, shouldnt have');
       }
     }).catch((error) => {
       console.log('Unable to retrieve data: ' + error);
@@ -75,116 +73,116 @@ class App extends Component {
     //AsyncStorage.removeItem('language');
     return (
       <View style={{ flex: 1 }}>
-        <StatusBar
-          barStyle="light-content"
-          hidden
-        />
-        <View style={{ flex: 1 }}>
-          { this.state.languageChosen &&
-            <View style={{ flex: 1 }}>
-              { this.state.language === 'English' &&
-                <View style={{ flex: 1 }}>
-                  <View style={styles.headerStyle}>
-                    <TouchableOpacity onPress={() => this.unsetLanguage()}>
-                      <Image
-                        style={styles.settings}
-                        source={require('./images/SettingsCog.png')}
-                      />
-                    </TouchableOpacity>
-                    <Text style={styles.titleStyle}>Light of Life TV</Text>
-                  </View>
-                  <EnglishRoot />
+        { this.state.languageChosen &&
+          <View style={{ flex: 1 }}>
+            { this.state.language === 'English' &&
+              <View style={{ flex: 1 }}>
+                <View style={styles.headerStyle}>
+                  <TouchableOpacity onPress={() => this.unsetLanguage()}>
+                    <Image
+                      style={styles.settings}
+                      source={require('./images/SettingsCog.png')}
+                    />
+                  </TouchableOpacity>
+                  <Text style={styles.titleStyle}>Light of Life TV</Text>
                 </View>
-              }
-              { this.state.language === 'Turkish' &&
-                <View style={{ flex: 1 }}>
-                  <View style={styles.headerStyle}>
-                    <TouchableOpacity onPress={() => this.unsetLanguage()}>
-                      <Image
-                        style={styles.settings}
-                        source={require('./images/SettingsCog.png')}
-                      />
-                    </TouchableOpacity>
-                    <Text style={styles.titleStyle}>{"Yaşam TV'nin Işığı"}</Text>
-                  </View>
-                  <TurkishRoot />
+                <EnglishRoot />
+              </View>
+            }
+            { this.state.language === 'Turkish' &&
+              <View style={{ flex: 1 }}>
+                <View style={styles.headerStyle}>
+                  <TouchableOpacity onPress={() => this.unsetLanguage()}>
+                    <Image
+                      style={styles.settings}
+                      source={require('./images/SettingsCog.png')}
+                    />
+                  </TouchableOpacity>
+                  <Text style={styles.titleStyle}>{"Yaşam TV'nin Işığı"}</Text>
                 </View>
-              }
-              { this.state.language === 'Arabic' &&
-                <View style={{ flex: 1 }}>
-                  <View style={styles.headerStyle}>
-                    <TouchableOpacity onPress={() => this.unsetLanguage()}>
-                      <Image
-                        style={styles.settings}
-                        source={require('./images/SettingsCog.png')}
-                      />
-                    </TouchableOpacity>
-                    <Text style={styles.titleStyle}>تلفزيون ضوء الحياة</Text>
-                  </View>
-                  <ArabicRoot />
+                <TurkishRoot />
+              </View>
+            }
+            { this.state.language === 'Arabic' &&
+              <View style={{ flex: 1 }}>
+                <View style={styles.headerStyle}>
+                  <TouchableOpacity onPress={() => this.unsetLanguage()}>
+                    <Image
+                      style={styles.settings}
+                      source={require('./images/SettingsCog.png')}
+                    />
+                  </TouchableOpacity>
+                  <Text style={styles.titleStyle}>تلفزيون ضوء الحياة</Text>
                 </View>
-              }
-              { this.state.language === 'Urdu' &&
-                <View style={{ flex: 1 }}>
-                  <View style={styles.headerStyle}>
-                    <TouchableOpacity onPress={() => this.unsetLanguage()}>
-                      <Image
-                        style={styles.settings}
-                        source={require('./images/SettingsCog.png')}
-                      />
-                    </TouchableOpacity>
-                    <Text style={styles.titleStyle}>لائف ٹی وی کی روشنی</Text>
-                  </View>
-                  <UrduRoot />
+                <ArabicRoot />
+              </View>
+            }
+            { this.state.language === 'Urdu' &&
+              <View style={{ flex: 1 }}>
+                <View style={styles.headerStyle}>
+                  <TouchableOpacity onPress={() => this.unsetLanguage()}>
+                    <Image
+                      style={styles.settings}
+                      source={require('./images/SettingsCog.png')}
+                    />
+                  </TouchableOpacity>
+                  <Text style={styles.titleStyle}>لائف ٹی وی کی روشنی</Text>
                 </View>
-              }
+                <UrduRoot />
+              </View>
+            }
+          </View>
+        }
+        { !this.state.languageChosen &&
+          <View style={styles.container}>
+            <View style={styles.logoContainer}>
+              <Image
+                style={{ resizeMode: 'contain', alignSelf: 'center', height: '80%', top: '10%' }}
+                source={require('./images/favicon.png')}
+              />
             </View>
-          }
-          { !this.state.languageChosen &&
-            <View style={styles.container}>
-              <View style={styles.languageContainer}>
-                <TouchableOpacity style={{ flex: 1 }} onPress={() => this.setLanguage('English')}>
-                  <ImageBackground
-                    style={styles.backgroundImage}
-                    source={require('./images/BG-English.jpg')}
-                  >
-                    <Text style={styles.languageChoice}>English</Text>
-                  </ImageBackground>
-                </TouchableOpacity>
-              </View>
-              <View style={styles.languageContainer}>
-                <TouchableOpacity style={{ flex: 1 }} onPress={() => this.setLanguage('Turkish')}>
-                  <ImageBackground
-                    style={styles.backgroundImage}
-                    source={require('./images/BG-Turkish.jpg')}
-                  >
-                    <Text style={styles.languageChoice}>Türk</Text>
-                  </ImageBackground>
-                </TouchableOpacity>
-              </View>
-              <View style={styles.languageContainer}>
-                <TouchableOpacity style={{ flex: 1 }} onPress={() => this.setLanguage('Arabic')}>
-                  <ImageBackground
-                    style={styles.backgroundImage}
-                    source={require('./images/BG-Arabic.jpg')}
-                  >
-                    <Text style={styles.languageChoice}>عربى</Text>
-                  </ImageBackground>
-                </TouchableOpacity>
-              </View>
-              <View style={styles.languageContainer}>
-                <TouchableOpacity style={{ flex: 1 }} onPress={() => this.setLanguage('Urdu')}>
-                  <ImageBackground
-                    style={styles.backgroundImage}
-                    source={require('./images/BG-Urdu.jpg')}
-                  >
-                    <Text style={styles.languageChoice}>اردو</Text>
-                  </ImageBackground>
-                </TouchableOpacity>
-              </View>
+            <View style={styles.languageContainer}>
+              <TouchableOpacity style={{ flex: 1 }} onPress={() => this.setLanguage('English')}>
+                <ImageBackground
+                  style={styles.backgroundImage}
+                  source={require('./images/BG-English.jpg')}
+                >
+                  <Text style={styles.languageChoice}>English</Text>
+                </ImageBackground>
+              </TouchableOpacity>
             </View>
-          }
-        </View>
+            <View style={styles.languageContainer}>
+              <TouchableOpacity style={{ flex: 1 }} onPress={() => this.setLanguage('Turkish')}>
+                <ImageBackground
+                  style={styles.backgroundImage}
+                  source={require('./images/BG-Turkish.jpg')}
+                >
+                  <Text style={styles.languageChoice}>Türk</Text>
+                </ImageBackground>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.languageContainer}>
+              <TouchableOpacity style={{ flex: 1 }} onPress={() => this.setLanguage('Arabic')}>
+                <ImageBackground
+                  style={styles.backgroundImage}
+                  source={require('./images/BG-Arabic.jpg')}
+                >
+                  <Text style={styles.languageChoice}>عربى</Text>
+                </ImageBackground>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.languageContainer}>
+              <TouchableOpacity style={{ flex: 1 }} onPress={() => this.setLanguage('Urdu')}>
+                <ImageBackground
+                  style={styles.backgroundImage}
+                  source={require('./images/BG-Urdu.jpg')}
+                >
+                  <Text style={styles.languageChoice}>اردو</Text>
+                </ImageBackground>
+              </TouchableOpacity>
+            </View>
+          </View>
+        }
       </View>
     );
   }
@@ -204,6 +202,7 @@ const styles = {
   headerStyle: {
     backgroundColor: '#00b4f0',
     width: '100%',
+    postition: 'relative'
   },
   container: {
     flex: 1,
@@ -213,14 +212,15 @@ const styles = {
   },
   settings: {
     postition: 'absolute',
-    marginTop: 10,
-    marginLeft: 10,
-    width: 30,
-    height: 30,
-    zIndex: 9999999
+    marginRight: 5,
+    marginTop: 5,
+    width: 25,
+    height: 25,
+    zIndex: 9999999,
+    alignSelf: 'flex-end'
   },
   languageChoice: {
-    padding: 20,
+    padding: 10,
     fontWeight: 'bold',
     fontSize: 20,
     color: '#000',
@@ -229,8 +229,12 @@ const styles = {
     backgroundColor: 'rgba(255, 255, 255, 0.6)'
   },
   languageContainer: {
-    height: '25%',
+    height: '19%',
     alignSelf: 'stretch',
+  },
+  logoContainer: {
+    height: '24%',
+    alignSelf: 'stretch'
   },
   backgroundImage: {
     resizeMode: 'cover',

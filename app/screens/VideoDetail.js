@@ -12,26 +12,27 @@ class VideoDetail extends Component {
     if (embed_ID.length > 1) {
       const result = [];
       for (let i = 0; i < embed_ID.length; i++) {
-      result.push(
-        <TouchableOpacity onPress={() => this.onPressVideo(embed_ID[i])}>
-          <ListItem
-            key={id}
-            avatar={{ uri: embed_ID[i][1] }}
-            title={embed_ID[i][2]}
-            chevronColor='#000'
-            avatarContainerStyle={{
-              width: 250,
-              height: 150
-            }}
-            avatarStyle={{
-              height: 150,
-              width: 250
-            }}
-            titleStyle={{
-              fontSize: 22,
-              textAlign: 'center'
-            }}
-          />
+        result.push(
+          <TouchableOpacity onPress={() => this.onPressVideo(embed_ID[i])}>
+            <ListItem
+              key={id}
+              avatar={{ uri: embed_ID[i][1] }}
+              title={embed_ID[i][2]}
+              chevronColor='#000'
+              avatarContainerStyle={{
+                width: 140,
+                height: 70,
+                maxWidth: '30%'
+              }}
+              avatarStyle={{
+                width: '100%',
+                height: '100%'
+              }}
+              titleStyle={{
+                fontSize: 16,
+                textAlign: 'center'
+              }}
+            />
           </TouchableOpacity>
         );
       }

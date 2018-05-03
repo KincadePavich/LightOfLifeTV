@@ -29,7 +29,6 @@ class ProgramsFeed extends Component {
   }
   noItems(language) {
     if (language === 'English') {
-      console.log('yaaaaaaa');
       return 'There are currently no videos available in this category in English.';
     } else if (language === 'Turkish') {
       return 'Bu kategoride Türkçe dilinde hiç video yok.';
@@ -50,8 +49,8 @@ class ProgramsFeed extends Component {
             title={this.state.items[i].title.rendered}
             chevronColor='#000'
             avatarContainerStyle={{
-              width: 150,
-              height: 150,
+              width: 140,
+              height: 70,
               maxWidth: '30%',
             }}
             avatarStyle={{
@@ -96,7 +95,7 @@ const styles = {
     padding: 20,
     color: '#000',
     textAlign: 'center',
-    fontSize: 24
+    fontSize: 18
   }
 };
 
