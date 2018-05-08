@@ -7,7 +7,7 @@ class VideoPlayer extends Component {
     const id = Object.values(this.props.navigation.state.params)[0];
     const title = Object.values(this.props.navigation.state.params)[2];
     return (
-      <ScrollView style={{ flex: 1 }}>
+      <ScrollView style={{ flex: 1, backgroundColor: '#222' }}>
         <Text style={styles.titleStyle}>{title}</Text>
         <YouTube
           apiKey="AIzaSyCov2wJ_Q1SoXTlOBusbB0-KgRw4BKKcr4"
@@ -26,8 +26,8 @@ class VideoPlayer extends Component {
 const styles = {
   titleStyle: {
     alignSelf: 'center',
-    fontSize: 30,
-    color: '#000',
+    fontSize: 24,
+    color: '#fff',
     paddingBottom: 15,
     paddingTop: 15,
     width: '100%',

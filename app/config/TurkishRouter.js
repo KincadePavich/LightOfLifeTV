@@ -18,9 +18,12 @@ export const DisciplesStack = StackNavigator({
     navigationOptions: {
       title: 'Öğrencilere tekrar TV',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
+        backgroundColor: '#111',
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
       headerBackTitle: '',
       headerTruncatedBackTitle: '',
     }
@@ -30,9 +33,14 @@ export const DisciplesStack = StackNavigator({
     navigationOptions: {
       title: 'Bölümlere Geri Dön',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
+        backgroundColor: '#111',
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
+      headerBackTitle: '',
+      headerTruncatedBackTitle: '',
     }
   }
 });
@@ -48,9 +56,12 @@ export const MoviesStack = StackNavigator({
     navigationOptions: {
       title: 'Filmlere Geri Dön',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
+        backgroundColor: '#111',
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
       headerBackTitle: '',
       headerTruncatedBackTitle: '',
     }
@@ -60,9 +71,14 @@ export const MoviesStack = StackNavigator({
     navigationOptions: {
       title: 'Bölümlere Geri Dön',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
+        backgroundColor: '#111',
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
+      headerBackTitle: '',
+      headerTruncatedBackTitle: '',
     }
   }
 });
@@ -78,9 +94,12 @@ export const ProgramsStack = StackNavigator({
     navigationOptions: {
       title: 'TV Programlarına Dön',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
+        backgroundColor: '#111',
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
       headerBackTitle: '',
       headerTruncatedBackTitle: '',
     }
@@ -90,9 +109,14 @@ export const ProgramsStack = StackNavigator({
     navigationOptions: {
       title: 'Bölümlere Geri Dön',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
+        backgroundColor: '#111',
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
+      headerBackTitle: '',
+      headerTruncatedBackTitle: '',
     }
   }
 });
@@ -108,9 +132,12 @@ export const ChildrenStack = StackNavigator({
     navigationOptions: {
       title: 'Çocuklara Geri Dön',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
+        backgroundColor: '#111',
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
       headerBackTitle: '',
       headerTruncatedBackTitle: '',
     }
@@ -120,9 +147,14 @@ export const ChildrenStack = StackNavigator({
     navigationOptions: {
       title: 'Bölümlere Geri Dön',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
+        backgroundColor: '#111',
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
+      headerBackTitle: '',
+      headerTruncatedBackTitle: '',
     }
   }
 });
@@ -178,7 +210,7 @@ export const Tabs = TabNavigator({
     activeTintColor: '#fff',
     inactiveTintColor: '#21c2f8',
     style: {
-      backgroundColor: '#222',
+      backgroundColor: '#333',
     },
   }
 });
