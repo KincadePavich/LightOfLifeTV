@@ -17,7 +17,10 @@ class VideoDetail extends Component {
               key={id}
               avatar={{ uri: embed_ID[i][1] }}
               title={embed_ID[i][2]}
-              chevronColor='#000'
+              chevronColor='#21c2f8'
+              containerStyle={{
+                backgroundColor: '#222'
+              }}
               avatarContainerStyle={{
                 width: 140,
                 height: 70,
@@ -29,7 +32,8 @@ class VideoDetail extends Component {
               }}
               titleStyle={{
                 fontSize: 16,
-                textAlign: 'center'
+                textAlign: 'center',
+                color: '#fff'
               }}
             />
           </TouchableOpacity>
@@ -56,7 +60,7 @@ class VideoDetail extends Component {
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <ScrollView style={{ marginTop: -22 }}>
+        <ScrollView style={{ marginTop: -22, backgroundColor: '#222' }}>
           <List>
             {this.renderVideos()}
           </List>

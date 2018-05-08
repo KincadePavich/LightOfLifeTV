@@ -6,7 +6,7 @@ class VideoPlayer extends Component {
     const id = Object.values(this.props.navigation.state.params)[0];
     const title = Object.values(this.props.navigation.state.params)[2];
     return (
-      <ScrollView style={{ flex: 1 }}>
+      <ScrollView style={{ flex: 1, backgroundColor: '#222' }}>
         <Text style={styles.titleStyle}>{title}</Text>
         <View style={{ flex: 1, height: 300 }}>
           <WebView
@@ -26,7 +26,7 @@ const styles = {
   titleStyle: {
     alignSelf: 'center',
     fontSize: 24,
-    color: '#000',
+    color: '#fff',
     paddingBottom: 15,
     paddingTop: 15,
     width: '100%',

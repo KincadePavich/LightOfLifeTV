@@ -72,7 +72,7 @@ class App extends Component {
   render() {
     //AsyncStorage.removeItem('language');
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, backgroundColor: '#222' }}>
         <StatusBar
           barStyle="light-content"
         />
@@ -141,8 +141,8 @@ class App extends Component {
             <View style={styles.container}>
               <View style={styles.logoContainer}>
                 <Image
-                  style={{ resizeMode: 'contain', alignSelf: 'center', height: '80%', top: '10%' }}
-                  source={require('./images/favicon.png')}
+                  style={{ resizeMode: 'contain', alignSelf: 'center', height: '80%', top: '15%' }}
+                  source={require('./images/LoL.png')}
                 />
               </View>
               <View style={styles.languageContainer}>
@@ -198,21 +198,21 @@ const styles = {
     alignSelf: 'center',
     fontSize: 30,
     color: '#fff',
-    paddingBottom: 15,
-    paddingTop: 15,
+    paddingVertical: 15,
+    paddingHorizontal: 40,
     textAlign: 'center',
     fontWeight: 'bold',
     marginTop: -40
   },
   headerStyle: {
-    backgroundColor: '#00b4f0',
+    backgroundColor: '#111',
     width: '100%',
     paddingTop: 20,
     postition: 'relative'
   },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#222',
     alignItems: 'center',
     justifyContent: 'center',
   },

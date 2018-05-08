@@ -47,7 +47,10 @@ class ChildrenFeed extends Component {
             key={this.state.items[i].id}
             avatar={{ uri: this.state.items[i].cds_source }}
             title={this.state.items[i].title.rendered}
-            chevronColor='#000'
+            chevronColor='#21c2f8'
+            containerStyle={{
+              backgroundColor: '#222'
+            }}
             avatarContainerStyle={{
               width: 140,
               height: 70,
@@ -59,7 +62,8 @@ class ChildrenFeed extends Component {
             }}
             titleStyle={{
               fontSize: 16,
-              textAlign: 'center'
+              textAlign: 'center',
+              color: '#fff'
             }}
           />
         </TouchableOpacity>
@@ -69,14 +73,14 @@ class ChildrenFeed extends Component {
   }
   render() {
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1, backgroundColor: '#222' }}>
         { !this.state.loaded &&
-          <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', height: '100%' }}>
+          <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', height: '100%', backgroundColor: '#222' }}>
             <Spinner size="large" />
           </View>
         }
         { this.state.loaded && this.state.items.length > 0 &&
-          <ScrollView style={{ marginTop: -22 }}>
+          <ScrollView style={{ marginTop: -22, backgroundColor: '#222' }}>
             <List>
               {this.renderList()}
             </List>
@@ -93,7 +97,7 @@ class ChildrenFeed extends Component {
 const styles = {
   noItems: {
     padding: 20,
-    color: '#000',
+    color: '#fff',
     textAlign: 'center',
     fontSize: 18
   }

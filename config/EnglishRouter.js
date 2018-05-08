@@ -18,10 +18,13 @@ export const DisciplesStack = StackNavigator({
     navigationOptions: {
       title: 'Back to Discipleship TV',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
-        marginTop: -20
+        backgroundColor: '#111',
+        marginTop: -20,
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
       headerBackTitle: '',
       headerTruncatedBackTitle: '',
     }
@@ -31,10 +34,15 @@ export const DisciplesStack = StackNavigator({
     navigationOptions: {
       title: 'Back to Episodes',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
-				marginTop: -20
+        backgroundColor: '#111',
+        marginTop: -20,
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
+      headerBackTitle: '',
+      headerTruncatedBackTitle: '',
     }
   }
 });
@@ -50,10 +58,13 @@ export const MoviesStack = StackNavigator({
     navigationOptions: {
       title: 'Back to Movies',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
-				marginTop: -20
+        backgroundColor: '#111',
+        marginTop: -20,
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
       headerBackTitle: '',
       headerTruncatedBackTitle: '',
     }
@@ -63,10 +74,15 @@ export const MoviesStack = StackNavigator({
     navigationOptions: {
       title: 'Back to Episodes',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
-				marginTop: -20
+        backgroundColor: '#111',
+        marginTop: -20,
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
+      headerBackTitle: '',
+      headerTruncatedBackTitle: '',
     }
   }
 });
@@ -82,10 +98,13 @@ export const ProgramsStack = StackNavigator({
     navigationOptions: {
       title: 'Back to TV Programs',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
-				marginTop: -20
+        backgroundColor: '#111',
+        marginTop: -20,
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
       headerBackTitle: '',
       headerTruncatedBackTitle: '',
     }
@@ -95,10 +114,15 @@ export const ProgramsStack = StackNavigator({
     navigationOptions: {
       title: 'Back to Episodes',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
-				marginTop: -20
+        backgroundColor: '#111',
+        marginTop: -20,
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
+      headerBackTitle: '',
+      headerTruncatedBackTitle: '',
     }
   }
 });
@@ -114,10 +138,13 @@ export const ChildrenStack = StackNavigator({
     navigationOptions: {
       title: 'Back to Childen',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
-				marginTop: -20
+        backgroundColor: '#111',
+        marginTop: -20,
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
       headerBackTitle: '',
       headerTruncatedBackTitle: '',
     }
@@ -127,10 +154,15 @@ export const ChildrenStack = StackNavigator({
     navigationOptions: {
       title: 'Back to Episodes',
       headerStyle: {
-        borderBottomColor: '#000',
-        borderBottomWidth: 2,
-				marginTop: -20
+        backgroundColor: '#111',
+        marginTop: -20,
       },
+      headerTitleStyle: {
+        color: '#fff'
+      },
+      headerTintColor: '#21c2f8',
+      headerBackTitle: '',
+      headerTruncatedBackTitle: '',
     }
   }
 });
@@ -186,7 +218,7 @@ export const Tabs = TabNavigator({
     activeTintColor: '#fff',
     inactiveTintColor: '#21c2f8',
     style: {
-      backgroundColor: '#222',
+      backgroundColor: '#333',
     },
   }
 });
