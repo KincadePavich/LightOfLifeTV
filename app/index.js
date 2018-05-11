@@ -217,9 +217,8 @@ const styles = {
   headerStyle: {
     backgroundColor: '#111',
     width: '100%',
-    paddingTop: 20,
     postition: 'relative',
-    maxHeight: 115,
+    maxHeight: 105,
   },
   container: {
     flex: 1,
