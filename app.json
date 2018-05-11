@@ -6,7 +6,7 @@
     "privacy": "public",
     "sdkVersion": "26.0.0",
     "platforms": ["ios", "android"],
-    "version": "1.0.0",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "http://54.93.50.241/wp-content/uploads/2018/05/AppIcon2.png",
     "splash": {
@@ -23,7 +23,7 @@
     "ios": {
       "bundleIdentifier": "com.conceptdesignstudios.lol",
       "supportsTablet": true,
-      "buildNumber": "1.0.0",
+      "buildNumber": "1.0.2",
     },
     "android": {
       "package": "conceptdesignstudios.lol",

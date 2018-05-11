@@ -88,7 +88,10 @@ class App extends Component {
                         source={require('./images/SettingsCog.png')}
                       />
                     </TouchableOpacity>
-                    <Text style={styles.titleStyle}>Light of Life TV</Text>
+                    <Image
+                      style={styles.logo}
+                      source={require('./images/English.png')}
+                    />
                   </View>
                   <EnglishRoot />
                 </View>
@@ -102,7 +105,10 @@ class App extends Component {
                         source={require('./images/SettingsCog.png')}
                       />
                     </TouchableOpacity>
-                    <Text style={styles.titleStyle}>{"Yaşam TV'nin Işığı"}</Text>
+                    <Image
+                      style={styles.logo}
+                      source={require('./images/Turkish.png')}
+                    />
                   </View>
                   <TurkishRoot />
                 </View>
@@ -116,7 +122,10 @@ class App extends Component {
                         source={require('./images/SettingsCog.png')}
                       />
                     </TouchableOpacity>
-                    <Text style={styles.titleStyle}>تلفزيون ضوء الحياة</Text>
+                    <Image
+                      style={styles.logo}
+                      source={require('./images/Arabic.png')}
+                    />
                   </View>
                   <ArabicRoot />
                 </View>
@@ -130,7 +139,10 @@ class App extends Component {
                         source={require('./images/SettingsCog.png')}
                       />
                     </TouchableOpacity>
-                    <Text style={styles.titleStyle}>لائف ٹی وی کی روشنی</Text>
+                    <Image
+                      style={styles.logo}
+                      source={require('./images/Urdu.png')}
+                    />
                   </View>
                   <UrduRoot />
                 </View>
@@ -194,21 +206,20 @@ class App extends Component {
 }
 
 const styles = {
-  titleStyle: {
-    alignSelf: 'center',
-    fontSize: 30,
-    color: '#fff',
-    paddingVertical: 15,
-    paddingHorizontal: 40,
-    textAlign: 'center',
-    fontWeight: 'bold',
-    marginTop: -40
+  logo: {
+    postition: 'relative',
+    width: '70%',
+    left: '15%',
+    top: -15,
+    maxHeight: 65,
+    resizeMode: 'contain'
   },
   headerStyle: {
     backgroundColor: '#111',
     width: '100%',
     paddingTop: 20,
-    postition: 'relative'
+    postition: 'relative',
+    maxHeight: 115,
   },
   container: {
     flex: 1,
