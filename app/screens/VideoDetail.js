@@ -43,8 +43,8 @@ class VideoDetail extends Component {
       return result;
     } else {
       return (
-        <View style={{ flex: 1 }}>
-          <Text style={styles.titleStyle}>embed_ID[0][2]</Text>
+        <ScrollView style={{ flex: 1, backgroundColor: '#222' }}>
+          <Text style={styles.titleStyle}>{embed_ID[0][2]}</Text>
           <YouTube
             apiKey="AIzaSyCov2wJ_Q1SoXTlOBusbB0-KgRw4BKKcr4"
             videoId={embed_ID[0][0]}   // The YouTube video ID
@@ -54,7 +54,7 @@ class VideoDetail extends Component {
             onError={e => this.setState({ error: e.error })}
             style={{ alignSelf: 'stretch', height: 300 }}
           />
-        </View>
+        </ScrollView>
       );
     }
   }
@@ -72,15 +72,14 @@ class VideoDetail extends Component {
 }
 
 const styles = {
-  WebViewContainer: {
-    marginTop: 20,
-  },
   titleStyle: {
     alignSelf: 'center',
     fontSize: 24,
-    color: '#000',
+    color: '#fff',
     paddingBottom: 15,
     paddingTop: 15,
+    paddingLeft: 10,
+    paddingRight: 10,
     width: '100%',
     textAlign: 'center',
     fontWeight: 'bold'

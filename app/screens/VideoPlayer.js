@@ -30,6 +30,8 @@ const styles = {
     color: '#fff',
     paddingBottom: 15,
     paddingTop: 15,
+    paddingLeft: 10,
+    paddingRight: 10,
     width: '100%',
     textAlign: 'center',
     fontWeight: 'bold'
