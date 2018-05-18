@@ -42,15 +42,14 @@ class VideoDetail extends Component {
       return result;
     } else {
       return (
-        <ScrollView style={{ flex: 1 }}>
-          <Text style={styles.titleStyle}>embed_ID[0][2]</Text>
+        <ScrollView style={{ flex: 1, backgroundColor: '#222' }}>
+          <Text style={styles.titleStyle}>{embed_ID[0][2]}</Text>
           <View style={{ flex: 1, height: 300 }}>
             <WebView
               key={embed_ID[0][0]}
-              style={styles.WebViewContainer}
               javaScriptEnabled
               domStorageEnabled
-              source={{ uri: 'https://www.youtube.com/embed/' + embed_ID[1] }}
+              source={{ uri: 'https://www.youtube.com/embed/' + embed_ID[0][0] }}
             />
           </View>
         </ScrollView>
@@ -71,15 +70,14 @@ class VideoDetail extends Component {
 }
 
 const styles = {
-  WebViewContainer: {
-    marginTop: 20,
-  },
   titleStyle: {
     alignSelf: 'center',
     fontSize: 24,
-    color: '#000',
+    color: '#fff',
     paddingBottom: 15,
     paddingTop: 15,
+    paddingLeft: 10,
+    paddingRight: 10,
     width: '100%',
     textAlign: 'center',
     fontWeight: 'bold'

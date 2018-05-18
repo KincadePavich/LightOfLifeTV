@@ -11,7 +11,6 @@ class VideoPlayer extends Component {
         <View style={{ flex: 1, height: 300 }}>
           <WebView
             key={id}
-            style={styles.WebViewContainer}
             javaScriptEnabled
             domStorageEnabled
             source={{ uri: 'https://www.youtube.com/embed/' + id }}
@@ -29,6 +28,8 @@ const styles = {
     color: '#fff',
     paddingBottom: 15,
     paddingTop: 15,
+    paddingLeft: 10,
+    paddingRight: 10,
     width: '100%',
     textAlign: 'center',
     fontWeight: 'bold'
