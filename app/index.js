@@ -23,34 +23,34 @@ class App extends Component {
     if (value === 'English') {
       object = {
         name: 'English',
-        disciples: 'http://54.93.50.241/wp-json/wp/v2/posts?categories=5',
-        movies: 'http://54.93.50.241/wp-json/wp/v2/posts?categories=6',
-        programs: 'http://54.93.50.241/wp-json/wp/v2/posts?categories=7',
-        children: 'http://54.93.50.241/wp-json/wp/v2/posts?categories=8',
+        disciples: 'http://lightoflifetv.com/wp-json/wp/v2/posts?categories=5',
+        movies: 'http://lightoflifetv.com/wp-json/wp/v2/posts?categories=6',
+        programs: 'http://lightoflifetv.com/wp-json/wp/v2/posts?categories=7',
+        children: 'http://lightoflifetv.com/wp-json/wp/v2/posts?categories=8',
       };
     } else if (value === 'Turkish') {
       object = {
         name: 'Turkish',
-        disciples: 'http://54.93.50.241/tr/wp-json/wp/v2/posts?categories=5',
-        movies: 'http://54.93.50.241/tr/wp-json/wp/v2/posts?categories=6',
-        programs: 'http://54.93.50.241/tr/wp-json/wp/v2/posts?categories=7',
-        children: 'http://54.93.50.241/tr/wp-json/wp/v2/posts?categories=8',
+        disciples: 'http://lightoflifetv.com/tr/wp-json/wp/v2/posts?categories=5',
+        movies: 'http://lightoflifetv.com/tr/wp-json/wp/v2/posts?categories=6',
+        programs: 'http://lightoflifetv.com/tr/wp-json/wp/v2/posts?categories=7',
+        children: 'http://lightoflifetv.com/tr/wp-json/wp/v2/posts?categories=8',
       };
     } else if (value === 'Arabic') {
       object = {
         name: 'Arabic',
-        disciples: 'http://54.93.50.241/ar/wp-json/wp/v2/posts?categories=5',
-        movies: 'http://54.93.50.241/ar/wp-json/wp/v2/posts?categories=6',
-        programs: 'http://54.93.50.241/ar/wp-json/wp/v2/posts?categories=7',
-        children: 'http://54.93.50.241/ar/wp-json/wp/v2/posts?categories=8',
+        disciples: 'http://lightoflifetv.com/ar/wp-json/wp/v2/posts?categories=5',
+        movies: 'http://lightoflifetv.com/ar/wp-json/wp/v2/posts?categories=6',
+        programs: 'http://lightoflifetv.com/ar/wp-json/wp/v2/posts?categories=7',
+        children: 'http://lightoflifetv.com/ar/wp-json/wp/v2/posts?categories=8',
       };
     } else if (value === 'Urdu') {
       object = {
         name: 'Urdu',
-        disciples: 'http://54.93.50.241/ur/wp-json/wp/v2/posts?categories=5',
-        movies: 'http://54.93.50.241/ur/wp-json/wp/v2/posts?categories=6',
-        programs: 'http://54.93.50.241/ur/wp-json/wp/v2/posts?categories=7',
-        children: 'http://54.93.50.241/ur/wp-json/wp/v2/posts?categories=8',
+        disciples: 'http://lightoflifetv.com/ur/wp-json/wp/v2/posts?categories=5',
+        movies: 'http://lightoflifetv.com/ur/wp-json/wp/v2/posts?categories=6',
+        programs: 'http://lightoflifetv.com/ur/wp-json/wp/v2/posts?categories=7',
+        children: 'http://lightoflifetv.com/ur/wp-json/wp/v2/posts?categories=8',
       };
     }
     AsyncStorage.setItem('language', JSON.stringify(object));
@@ -153,7 +153,7 @@ class App extends Component {
             <View style={styles.container}>
               <View style={styles.logoContainer}>
                 <Image
-                  style={{ resizeMode: 'contain', alignSelf: 'center', height: '80%', top: '15%' }}
+                  style={{ resizeMode: 'contain', alignSelf: 'center', height: '80%', top: '10%' }}
                   source={require('./images/LoL.png')}
                 />
               </View>
