@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, AsyncStorage, TouchableOpacity, ImageBackground, Image, StatusBar } from 'react-native';
+import { View, Text, AsyncStorage, TouchableOpacity, ImageBackground, Image, StatusBar, Linking } from 'react-native';
 import { EnglishRoot } from './config/EnglishRouter';
 import { ArabicRoot } from './config/ArabicRouter';
 import { TurkishRoot } from './config/TurkishRouter';
@@ -88,6 +88,12 @@ class App extends Component {
                         source={require('./images/SettingsCog.png')}
                       />
                     </TouchableOpacity>
+                    <TouchableOpacity onPress={() => Linking.openURL('https://www.facebook.com/lightoflifetv/')}>
+                      <Image
+                        style={styles.facebook}
+                        source={require('./images/Facebook.png')}
+                      />
+                    </TouchableOpacity>
                     <Image
                       style={styles.logo}
                       source={require('./images/English.png')}
@@ -103,6 +109,12 @@ class App extends Component {
                       <Image
                         style={styles.settings}
                         source={require('./images/SettingsCog.png')}
+                      />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => Linking.openURL('https://www.facebook.com/Lightoflifetvturkish-496403717411646/')}>
+                      <Image
+                        style={styles.facebook}
+                        source={require('./images/Facebook.png')}
                       />
                     </TouchableOpacity>
                     <Image
@@ -122,6 +134,12 @@ class App extends Component {
                         source={require('./images/SettingsCog.png')}
                       />
                     </TouchableOpacity>
+                    <TouchableOpacity onPress={() => Linking.openURL('https://www.facebook.com/lightoflifetvarabic/')}>
+                      <Image
+                        style={styles.facebook}
+                        source={require('./images/Facebook.png')}
+                      />
+                    </TouchableOpacity>
                     <Image
                       style={styles.logo}
                       source={require('./images/Arabic.png')}
@@ -137,6 +155,12 @@ class App extends Component {
                       <Image
                         style={styles.settings}
                         source={require('./images/SettingsCog.png')}
+                      />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => Linking.openURL('https://www.facebook.com/Lightoflifetvurdu-1611682712234065/')}>
+                      <Image
+                        style={styles.facebook}
+                        source={require('./images/Facebook.png')}
                       />
                     </TouchableOpacity>
                     <Image
@@ -210,7 +234,7 @@ const styles = {
     postition: 'relative',
     width: '70%',
     left: '15%',
-    top: -15,
+    top: -48,
     maxHeight: 65,
     resizeMode: 'contain'
   },
@@ -231,6 +255,15 @@ const styles = {
     postition: 'absolute',
     marginRight: 5,
     marginTop: 5,
+    width: 25,
+    height: 25,
+    zIndex: 9999999,
+    alignSelf: 'flex-end'
+  },
+  facebook: {
+    postition: 'absolute',
+    marginRight: 5,
+    marginTop: 10,
     width: 25,
     height: 25,
     zIndex: 9999999,

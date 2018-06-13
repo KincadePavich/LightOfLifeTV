@@ -41,33 +41,35 @@ class ProgramsFeed extends Component {
   renderList() {
     const videos = [];
     for (let i = 0; i < this.state.items.length; i++) {
-      videos.push(
-        <TouchableOpacity onPress={() => this.onPressVideo(this.state.items[i])}>
-          <ListItem
-            key={this.state.items[i].id}
-            avatar={{ uri: this.state.items[i].cds_source }}
-            title={this.state.items[i].title.rendered}
-            chevronColor='#21c2f8'
-            containerStyle={{
-              backgroundColor: '#222'
-            }}
-            avatarContainerStyle={{
-              width: 140,
-              height: 70,
-              maxWidth: '30%',
-            }}
-            avatarStyle={{
-              height: '100%',
-              width: '100%',
-            }}
-            titleStyle={{
-              fontSize: 16,
-              textAlign: 'center',
-              color: '#fff'
-            }}
-          />
-        </TouchableOpacity>
-      );
+      if (this.state.items[i].hide_on_app !== '1') {
+        videos.push(
+          <TouchableOpacity onPress={() => this.onPressVideo(this.state.items[i])}>
+            <ListItem
+              key={this.state.items[i].id}
+              avatar={{ uri: this.state.items[i].cds_source }}
+              title={this.state.items[i].title.rendered}
+              chevronColor='#21c2f8'
+              containerStyle={{
+                backgroundColor: '#222'
+              }}
+              avatarContainerStyle={{
+                width: 140,
+                height: 70,
+                maxWidth: '30%',
+              }}
+              avatarStyle={{
+                height: '100%',
+                width: '100%',
+              }}
+              titleStyle={{
+                fontSize: 16,
+                textAlign: 'center',
+                color: '#fff'
+              }}
+            />
+          </TouchableOpacity>
+        );
+      }
     }
     return videos;
   }
