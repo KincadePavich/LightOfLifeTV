@@ -36,6 +36,8 @@ class ChildrenFeed extends Component {
       return 'لا توجد حاليا مقاطع فيديو في هذه الفئة باللغة العربية.';
     } else if (language === 'Urdu') {
       return 'فی الحال اردو میں اس زمرے میں کوئی ویڈیو موجود نہیں ہیں.';
+    } else if (language === 'Farsi') {
+      return 'در حال حاضر هیچ فیلم در این مجموعه در زبان فارسی وجود ندارد.';
     }
   }
   renderList() {

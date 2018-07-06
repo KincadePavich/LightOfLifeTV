@@ -4,6 +4,7 @@ import { EnglishRoot } from './config/EnglishRouter';
 import { ArabicRoot } from './config/ArabicRouter';
 import { TurkishRoot } from './config/TurkishRouter';
 import { UrduRoot } from './config/UrduRouter';
+import { FarsiRoot } from './config/FarsiRouter';
 
 console.disableYellowBox = true;
 
@@ -51,6 +52,14 @@ class App extends Component {
         movies: 'http://lightoflifetv.com/ur/wp-json/wp/v2/posts?categories=6',
         programs: 'http://lightoflifetv.com/ur/wp-json/wp/v2/posts?categories=7',
         children: 'http://lightoflifetv.com/ur/wp-json/wp/v2/posts?categories=8',
+      };
+    } else if (value === 'Farsi') {
+      object = {
+        name: 'Farsi',
+        disciples: 'http://lightoflifetv.com/fa/wp-json/wp/v2/posts?categories=5',
+        movies: 'http://lightoflifetv.com/fa/wp-json/wp/v2/posts?categories=6',
+        programs: 'http://lightoflifetv.com/fa/wp-json/wp/v2/posts?categories=7',
+        children: 'http://lightoflifetv.com/fa/wp-json/wp/v2/posts?categories=8',
       };
     }
     AsyncStorage.setItem('language', JSON.stringify(object));
@@ -171,6 +180,29 @@ class App extends Component {
                   <UrduRoot />
                 </View>
               }
+              { this.state.language === 'Farsi' &&
+                <View style={{ flex: 1 }}>
+                  <View style={styles.headerStyle}>
+                    <TouchableOpacity onPress={() => this.unsetLanguage()}>
+                      <Image
+                        style={styles.settings}
+                        source={require('./images/SettingsCog.png')}
+                      />
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => Linking.openURL('https://www.facebook.com/lightoflifetvarabic/')}>
+                      <Image
+                        style={styles.facebook}
+                        source={require('./images/Facebook.png')}
+                      />
+                    </TouchableOpacity>
+                    <Image
+                      style={styles.logo}
+                      source={require('./images/Arabic.png')}
+                    />
+                  </View>
+                  <UrduRoot />
+                </View>
+              }
             </View>
           }
           { !this.state.languageChosen &&
@@ -218,6 +250,16 @@ class App extends Component {
                     source={require('./images/BG-Urdu.jpg')}
                   >
                     <Text style={styles.languageChoice}>اردو</Text>
+                  </ImageBackground>
+                </TouchableOpacity>
+              </View>
+              <View style={styles.languageContainer}>
+                <TouchableOpacity style={{ flex: 1 }} onPress={() => this.setLanguage('Farsi')}>
+                  <ImageBackground
+                    style={styles.backgroundImage}
+                    source={require('./images/BG-Farsi.jpg')}
+                  >
+                    <Text style={styles.languageChoice}>فارسی</Text>
                   </ImageBackground>
                 </TouchableOpacity>
               </View>
@@ -279,11 +321,11 @@ const styles = {
     backgroundColor: 'rgba(255, 255, 255, 0.6)'
   },
   languageContainer: {
-    height: '19%',
+    height: '16%',
     alignSelf: 'stretch',
   },
   logoContainer: {
-    height: '24%',
+    height: '20%',
     alignSelf: 'stretch'
   },
   backgroundImage: {
